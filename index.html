@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediBridge AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✚</span>
+            <span>MediBridge <b>AI</b></span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#screening">Screening</a>
+            <a href="#handover">Handover</a>
+            <a href="#history">History</a>
+        </nav>
+
+        <button class="language-btn" id="languageBtn">
+            தமிழ்
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🛡️ AI-Assisted Healthcare Navigation
+                </div>
+
+                <h1>
+                    From Symptoms
+                    <span>To The Right Care.</span>
+                </h1>
+
+                <p>
+                    MediBridge AI helps patients and caregivers organize
+                    health information, understand urgency levels, and
+                    create a doctor-ready medical handover summary.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#screening" class="primary-btn">
+                        Start Health Screening →
+                    </a>
+
+                    <a href="#handover" class="secondary-btn">
+                        Medical Handover
+                    </a>
+
+                </div>
+
+                <p class="medical-note">
+                    ⚠️ This platform provides screening support and does not
+                    replace professional medical diagnosis.
+                </p>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="pulse-circle">
+                    <span>❤</span>
+                </div>
+
+                <div class="floating-card card-one">
+                    <span>🩺</span>
+                    <div>
+                        <small>Health Status</small>
+                        <strong>Screening Ready</strong>
+                    </div>
+                </div>
+
+                <div class="floating-card card-two">
+                    <span>📋</span>
+                    <div>
+                        <small>Medical Handover</small>
+                        <strong>30-sec Summary</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT HELPS
+                </span>
+
+                <h2>
+                    One Bridge Between
+                    <span>Patient & Care.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">🚦</div>
+
+                    <h3>Urgency Screening</h3>
+
+                    <p>
+                        Organize symptoms and basic information
+                        to provide preliminary urgency guidance.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">📋</div>
+
+                    <h3>Medical Handover</h3>
+
+                    <p>
+                        Convert patient information into a
+                        structured doctor-ready summary.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">🌐</div>
+
+                    <h3>Language Support</h3>
+
+                    <p>
+                        Make healthcare information easier to
+                        understand with multilingual support.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">👨‍👩‍👧</div>
+
+                    <h3>Caregiver Mode</h3>
+
+                    <p>
+                        Allow family members or caregivers to
+                        organize information when patients need help.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SCREENING ================= -->
+
+        <section class="screening-section" id="screening">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HEALTH SCREENING
+                </span>
+
+                <h2>
+                    Tell us what is
+                    <span>happening.</span>
+                </h2>
+
+                <p>
+                    Enter basic information to generate a preliminary
+                    screening result.
+                </p>
+
+            </div>
+
+
+            <div class="screening-container">
+
+                <form id="screeningForm">
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label for="patientName">
+                                Patient Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="patientName"
+                                placeholder="Enter patient name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="age">
+                                Age
+                            </label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                min="1"
+                                max="120"
+                                placeholder="Age"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="symptoms">
+                            Main Symptoms
+                        </label>
+
+                        <textarea
+                            id="symptoms"
+                            rows="5"
+                            placeholder="Describe the main symptoms..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="duration">
+                            When did it start?
+                        </label>
+
+                        <select id="duration" required>
+
+                            <option value="">
+                                Select duration
+                            </option>
+
+                            <option value="minutes">
+                                Within the last few minutes
+                            </option>
+
+                            <option value="hours">
+                                Within the last few hours
+                            </option>
+
+                            <option value="days">
+                                1–3 days ago
+                            </option>
+
+                            <option value="long">
+                                More than 3 days ago
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Care Mode
+                        </label>
+
+                        <div class="care-options">
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="careMode"
+                                    value="patient"
+                                    checked
+                                >
+
+                                <span>👤</span>
+
+                                <div>
+                                    <strong>Patient</strong>
+                                    <small>I am entering my information</small>
+                                </div>
+
+                            </label>
+
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="careMode"
+                                    value="caregiver"
+                                >
+
+                                <span>👨‍👩‍👧</span>
+
+                                <div>
+                                    <strong>Caregiver</strong>
+                                    <small>I am helping someone</small>
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn full-btn"
+                    >
+                        Analyze Screening →
+                    </button>
+
+                </form>
+
+
+                <!-- SCREENING RESULT -->
+
+                <div
+                    class="result-panel"
+                    id="resultPanel"
+                >
+
+                    <div class="result-placeholder">
+
+                        <div class="result-icon">
+                            🩺
+                        </div>
+
+                        <h3>
+                            Screening Result
+                        </h3>
+
+                        <p>
+                            Complete the form to generate
+                            your preliminary screening result.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HANDOVER ================= -->
+
+        <section
+            class="handover-section"
+            id="handover"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    MEDICAL HANDOVER
+                </span>
+
+                <h2>
+                    Give doctors a
+                    <span>clearer picture.</span>
+                </h2>
+
+                <p>
+                    A structured summary can help organize
+                    important information before consultation.
+                </p>
+
+            </div>
+
+
+            <div
+                class="handover-card"
+                id="handoverCard"
+            >
+
+                <div class="handover-header">
+
+                    <div>
+
+                        <span class="status-dot"></span>
+
+                        <strong>
+                            MEDICAL HANDOVER CARD
+                        </strong>
+
+                    </div>
+
+                    <span id="handoverDate">
+                        -- / -- / ----
+                    </span>
+
+                </div>
+
+
+                <div class="handover-body">
+
+                    <div class="patient-summary">
+
+                        <div class="avatar">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <h3 id="handoverName">
+                                Patient Name
+                            </h3>
+
+                            <p id="handoverAge">
+                                Age: --
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="handover-grid">
+
+                        <div>
+
+                            <small>
+                                MAIN CONCERN
+                            </small>
+
+                            <p id="handoverSymptoms">
+                                Not available
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                ONSET
+                            </small>
+
+                            <p id="handoverDuration">
+                                Not available
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="urgency-box">
+
+                        <span>
+                            PRELIMINARY URGENCY
+                        </span>
+
+                        <strong id="handoverUrgency">
+                            Pending Screening
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HISTORY ================= -->
+
+        <section
+            class="history-section"
+            id="history"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HEALTH HISTORY
+                </span>
+
+                <h2>
+                    Keep your journey
+                    <span>organized.</span>
+                </h2>
+
+            </div>
+
+
+            <div
+                class="history-container"
+                id="historyContainer"
+            >
+
+                <div class="empty-history">
+
+                    <div>
+                        📊
+                    </div>
+
+                    <h3>
+                        No screening history yet
+                    </h3>
+
+                    <p>
+                        Your completed screenings will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DISCLAIMER ================= -->
+
+        <section class="disclaimer">
+
+            <div class="disclaimer-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <h3>
+                    Important Medical Notice
+                </h3>
+
+                <p>
+                    MediBridge AI is an educational and screening-support
+                    prototype. It does not provide medical diagnosis,
+                    treatment, or emergency medical services. In an actual
+                    emergency, contact your local emergency service or
+                    qualified healthcare professional immediately.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ✚ MediBridge AI
+        </div>
+
+        <p>
+            Bridging patients to better care.
+        </p>
+
+        <span>
+            © 2026 MediBridge AI
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
